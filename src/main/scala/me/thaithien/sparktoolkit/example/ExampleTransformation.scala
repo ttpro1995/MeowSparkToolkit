@@ -17,7 +17,7 @@ object ExampleTransformation extends SparkBase {
 
   override def output: DataFrame = {
     val colName: String = someStringParam.getValue
-    val outputDF: DataFrame = inputDataFrame.select(someStringParam.getValue)
+    val outputDF: DataFrame = inputDataFrame.select(colName)
     return outputDF
   }
 }
